@@ -163,6 +163,11 @@ h1 {
     color: #1ed760;
 }
 
+.icons {
+    margin: 10px;
+    filter: invert(100%);
+}
+
 h2 {
     font-size: 3em;
     font-weight: 700;
