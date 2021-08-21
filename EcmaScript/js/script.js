@@ -73,7 +73,45 @@ printNameArrowFunction( ) {
 const creature = new Person('Maria') 
 creature.printNameFunction()
 creature.printNameArrowFunction()
+
 //Funções map, filter e reduce;
+// map
+const produtos = [
+  {
+    nome: "notebook",
+    preco: 2100
+  },
+
+  {
+    nome: "smartphone",
+    preco:400
+  }
+]
+
+const ProdutosEmReais =  produtos.map( p => p.preco * 5)
+console.log(ProdutosEmReais)
+console.log(produtos)
+
+//reduce 
+const produtosReduce = [
+  {
+    nome: "notebook",
+    preco: 2100
+  },
+
+  {
+    nome: "smartphone",
+    preco:400
+  }
+]
+ const total  =  produtosReduce. reduce((a, b)  => a  + b.preco, 0) //  a é o acumulador  b item a ser processador e 0 valor inicial
+ console.log(total)
+
+ // filter
+ const  valoresQuaseAleatorios = [ 2, 4, 6, 89, 2, 5, 7, 4, 89, 0, 98]
+  const valoresRepetidos =  valoresQuaseAleatorios.filter((  elematual, indexelematual, arr) =>  arr.indexOf(elematual) === indexelematual) 
+  //O método indexOf() retorna o primeiro índice em que o elemento pode ser encontrado no array, retorna -1 caso o mesmo não esteja presente.
+  console.log (valoresRepetidos)
 //Funções some e every;
 //Função find;
 //Comandos const e let, entre outros.
