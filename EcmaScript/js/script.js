@@ -19,19 +19,21 @@ b = 'berry'; //Inicializa b
 console.log(a + "" + b); // 'Cranberry'
 var a, b; //Declara ambos a & b para hoisting */
 
-//---------------Novas features--------------------
-//Arrow Functions
+//--------------------Novas features------------------------------------------------//
+/*
+//Arrow Functions inicio
 // Em javaScript
 function sum(a, b) {
   return a + b
 }
  x = sum(1, 2)
- console.log(x)
+ console.log(x) //3
+
  //Com ES6
 const sum2  =  (a, b) =>   a + b
 
 y = sum2(3, 4)
-console.log(y)
+console.log(y) //7
 
 //js
 function isAdult(age) {
@@ -52,18 +54,21 @@ document.addEventListener('click', function () {
 
 //ES6
 document.addEventListener('click', ( ) => console.log('clickedComES6'))
+
+
  // arrow function this
 class Person {
   constructor(name) {
     this.name = name
   }
 
-printNameFunction() {
-  setTimeout(function() {
+  //js
+printNameFunction( ) {
+  setTimeout(function( ) {
     console.log(this.name)
   },100);
 }
-
+//Ecma
 printNameArrowFunction( ) {
   setTimeout( ( ) => {
     console.log(this.name)
@@ -71,15 +76,38 @@ printNameArrowFunction( ) {
 }
 }
 const creature = new Person('Maria') 
-creature.printNameFunction()
-creature.printNameArrowFunction()
+// define this com base onde a função é chamada
+creature.printNameFunction( ) // vazio
+creature.printNameArrowFunction( ) // maria
 
-//Funções map, filter e reduce;
-// map
+//Arrow Functions fim
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+//métodos  map, filter e reduce inicio
+// método map
+// coleção com dois produtos
 const produtos = [
   {
     nome: "notebook",
-    preco: 2100
+    preco: 2100 //dolar
   },
 
   {
@@ -88,11 +116,13 @@ const produtos = [
   }
 ]
 
-const ProdutosEmReais =  produtos.map( p => p.preco * 5)
+const ProdutosEmReais =  produtos.map( p => p.preco * 5) 
+//  criando uma nova coleção; referenciar o produto que recebe uma função callback como parametro
+// função callback argumento
 console.log(ProdutosEmReais)
-console.log(produtos)
+//console.log(produtos)
 
-//reduce 
+// método reduce 
 const produtosReduce = [
   {
     nome: "notebook",
@@ -111,8 +141,112 @@ const produtosReduce = [
  const  valoresQuaseAleatorios = [ 2, 4, 6, 89, 2, 5, 7, 4, 89, 0, 98]
   const valoresRepetidos =  valoresQuaseAleatorios.filter((  elematual, indexelematual, arr) =>  arr.indexOf(elematual) === indexelematual) 
   //O método indexOf() retorna o primeiro índice em que o elemento pode ser encontrado no array, retorna -1 caso o mesmo não esteja presente.
-  console.log (valoresRepetidos)
-//Funções some e every;
-//Função find;
-//Comandos const e let, entre outros.
+  console.log (valoresRepetidos)   
+  //métodos  map, filter e reduce fim
+  */
+  
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+//métodos  some - every- find  inicio
+// método some
+//testar se algum elemento de um array é maior que 10.
+function isBiggerThan10(currentValue, index, arr) {
+  return currentValue > 10;
+}
+ 
+console.log([2, 5, 8, 1, 4].some(isBiggerThan10));  // false
+console.log([12, 5, 8, 1, 4].some(isBiggerThan10)); // true
+
+
+//método every
+//testar se todos os elementos de um array são maiores que 10.
+function isBigEnough(currentValue, index, arr) {
+  return currentValue >= 10;
+}
+console.log([12, 5, 8, 130, 44].every(isBigEnough));   // false
+console.log([12, 54, 18, 130, 44].every(isBigEnough)); // true
+
+//método find
+//encontrar um objeto em um array através de uma de suas propriedades.
+var inventory = [
+  {name: 'jaca', quantity: 2},
+  {name: 'banana', quantity: 0},
+  {name: 'cereja', quantity: 5}
+];
+
+function isCherries(fruit, index, arr) { 
+  return fruit.name === 'cereja';
+}
+console.log(inventory.find(isCherries)); // { name: 'cereja', quantity: 5 }
+
+
+//métodos  some - every- find  fim
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Comandos const e let, entre outros. - identificadores de variáveis inicio
+// let
+function returnCar() {
+
+  let car = 'Land Rover';
+
+  if (car === 'Land Rover') {
+
+      let car = 'Ferrari';
+
+      console.log('Dentro do if: ' + car);
+
+  }
+
+  console.log('Fora do if: ' + car);
+
+}
+
+c = returnCar( )
+//console.log(c)
+// const
+const numero = 1;
+//numero = "1";
+
+console.log(numero); 
+// criando o objeto pessoa
+const pessoa = {
+  nome: 'Diego',
+  idade: 26
+}
+
+pessoa.sobrenome = 'Pinho'; // inserindo nova propriedade ao objeto
+
+console.log(pessoa);
+
+//Comandos const e let, entre outros. - identificadores de variáveis fim
