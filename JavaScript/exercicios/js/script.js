@@ -87,7 +87,7 @@ sequência deve retornar o valor encontrado.
 “O resultado é: <resultado>.”
 *A informação em vermelho é uma variável e deve ser substituída pelo seu respectivo valor
 calculada dentro da aplicação. 
-*/
+
 
 var numeroA  =  prompt('Digite o Primeiro Número')
 var operacao =  prompt('Digite a operação soma ou subtracao')
@@ -108,3 +108,28 @@ function calcular( numero1,numero2,operacao) {
 }
 document.write('O resultado é:' + calcular(numeroA, numeroB, operacao));
 
+*/
+
+/* 1) Crie um campo <input type="text"> e aplique os seguintes controles com base nos
+eventos 
+• No evento de foco modifique o background do input para amarelo.
+• Quando o campo perder o foco, recupere o seu respectivo valor o Caso o conteúdo contido no campo tenha menos de 3 caracteres o mesmo
+deve ter seu background alterado para vermelho.
+o Caso o conteúdo contido no campo tenha 3 caracteres ou mais o background
+deve ser alterado para verde. */
+
+function acionaCampo() {
+  document.getElementById('campoInput').style.background="yellow"
+
+}
+
+function validaCampo() {
+  var valorCampo = document.getElementById('campoInput').value
+
+  if (valorCampo.length < 3) {
+    document.getElementById('campoInput').style.background="red"
+  }
+  else {
+    document.getElementById('campoInput').style.background="green"
+  }
+}
