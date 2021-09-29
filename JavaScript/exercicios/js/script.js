@@ -116,7 +116,7 @@ eventos
 • Quando o campo perder o foco, recupere o seu respectivo valor o Caso o conteúdo contido no campo tenha menos de 3 caracteres o mesmo
 deve ter seu background alterado para vermelho.
 o Caso o conteúdo contido no campo tenha 3 caracteres ou mais o background
-deve ser alterado para verde. */
+deve ser alterado para verde. 
 
 function acionaCampo() {
   document.getElementById('campoInput').style.background="yellow"
@@ -132,4 +132,42 @@ function validaCampo() {
   else {
     document.getElementById('campoInput').style.background="green"
   }
+}
+
+*/
+
+var objetos = Array('Cadeira', 'Impressora','Garfo')
+
+function adicionarObjetos() {
+  var objeto = document.getElementById('objeto').value
+
+  if(objeto != '') {
+    if(objetos.indexOf(objeto) !== -1){
+      alert('Objeto já foi adicionado')
+    } else {
+      objetos.push(objeto)
+      console.log(objetos)
+      document.getElementById('objeto').value=''
+    }
+  } else {
+    alert ('Informe um objeto válido')
+  }
+}
+
+function removerObjetosFinal() {
+      objetos.pop()
+      console.log(objetos)
+      document.getElementById('objeto').value='' 
+}
+
+function removerObjetosInicial() {
+      objetos.shift()
+      console.log(objetos)
+      document.getElementById('objeto').value=''
+}
+
+
+function ordenarObjetos() {
+  objetos.sort()
+  console.log(objetos)
 }

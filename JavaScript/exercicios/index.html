@@ -3,10 +3,15 @@
     <head><!--Inicio cabecalho-->
         <meta charset="utf-8">
         <title>Treinando JavaScript</title>
+
+        <script src="js/script.js"></script>
     </head><!--/fim cabecalho-->
     <body><!--Inicio body-->
-
-        <input type="text" id="campoInput" onfocus="acionaCampo()" onblur="validaCampo()">
-        <script src="js/script.js"></script>
+       <!--  <input type="text" id="campoInput" onfocus="acionaCampo()" onblur="validaCampo()"> -->
+       <input type="text" id="objeto">
+       <button onclick="adicionarObjetos()">Adicionar</button>
+       <button onclick="removerObjetosFinal()">Remover Último elemento</button>
+       <button onclick="removerObjetosInicial()">Remover Primeiro elemento</button>
+       <button onclick="ordenarObjetos()">Ordenar</button>
     </body><!--/fim body-->
 </html>
