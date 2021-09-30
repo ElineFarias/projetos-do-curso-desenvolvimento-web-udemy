@@ -1,0 +1,30 @@
+<html>
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <!--Estilo Customizado-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+     <!--JavaScript-->
+   <script src="js/script.js"></script>
+
+    <title>APP- Mata Mosquito</title>
+</head>
+<body onresize="ajustarTamanhoPalcoJogo()">
+  <div class="painel">
+    <img id = "v1" src="imagens/coracao_cheio.png">
+    <img id="v2" src="imagens/coracao_cheio.png">
+    <img id= "v3" src="imagens/coracao_cheio.png">
+    <div class="vidas">
+      <div class="cronometro">Tempo restante: <span id="cronometro"></span></div>
+    </div>
+  </div>
+<script>
+   document.getElementById('cronometro').innerHTML = tempo
+  var criarMosca = setInterval(function() {
+    posicaoRandomica()
+  }, 2000)
+</script>  
+</body>
+</html>
