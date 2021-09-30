@@ -1,16 +1,27 @@
 var altura = 0
 var largura = 0
 var vidas = 1
-var tempo = 10
+var tempo = 15
+var criarMoscaTempo = 1500
+var nivel =  window.location.search
+nivel = nivel.replace('?', '')
+
+if(nivel === 'iniciante') {
+  var criarMoscaTempo = 1500
+} else if(nivel === 'normal') {
+  var criarMoscaTempo = 1000
+}else if (nivel === 'dificil') {
+  var criarMoscaTempo = 750
+}
+
 function ajustarTamanhoPalcoJogo() {
   altura = window.innerHeight
   largura = window.innerWidth
 }
-
 ajustarTamanhoPalcoJogo()
 
 var cronometro = setInterval(function() {
-  tempo -=1
+  tempo -= 1
   if(tempo < 0) {
     clearInterval(cronometro)
     clearInterval(criarMosca)
@@ -19,8 +30,8 @@ var cronometro = setInterval(function() {
     document.getElementById('cronometro').innerHTML = tempo
   }
 }, 1000)
+
 function posicaoRandomica() {
-  
   // remover a mosca anterior se existir
   if(document.getElementById('mosca')) {
     document.getElementById('mosca').remove()

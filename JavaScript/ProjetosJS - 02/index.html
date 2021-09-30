@@ -6,7 +6,18 @@
     <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <!--Estilo Customizado-->
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>APP- Mata Mosquito- fim de jogo</title>
+    <title>APP- Mata Mosquito- Inicio</title>
+    <script>
+			function iniciarJogo() {
+				var nivel = document.getElementById('nivel').value
+
+				if(nivel === '') {
+					alert('Selecione um nível para iniciar o jogo')
+					return false
+				}
+				window.location.href = "app.html?" + nivel
+			}
+		</script>
 </head>
 <body>
 
@@ -23,7 +34,7 @@
       <div class="col">
         <div class="d-flex justify-content-center">
           <div class="mb-2">
-            <select class="form-control">
+            <select class="form-control" id="nivel">
               <option value="">-- Selecione o nível--</option>
               <option value="iniciante">Iniciante</option>
               <option value="normal">Normal</option>
@@ -37,13 +48,10 @@
     <div class="row">
       <div class="col">
         <div class="d-flex justify-content-center">
-          <button type="button" class="btn btn-danger btn-lg" onclick="iniciarJogo()">Iniciar Jogo</button>
+          <button type="button" class="btn btn-danger btn-lg" onclick="iniciarJogo()" >Iniciar Jogo</button>
         </div>
       </div>
     </div>
   </div>
- 
-   <!--JavaScript-->
-   <script src="js/script.js"></script>
 </body>
 </html>
