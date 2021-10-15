@@ -8,6 +8,9 @@
 #conteudo a {
   color: red;
 }
+#conteudo a:hover {
+  color: yellow;
+}
 
 /*# sourceMappingURL=arquivo.scss.map */
 

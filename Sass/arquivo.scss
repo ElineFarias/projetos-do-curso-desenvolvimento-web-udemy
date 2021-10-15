@@ -6,6 +6,9 @@
    }
    a {
         color: red;
+        &:hover {
+          color: yellow;
+        }
   }
   }
 
