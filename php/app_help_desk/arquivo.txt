@@ -1,0 +1,5 @@
+
+4#chamado maria#Rede#vdc
+1#chamado josé#Impressora#Não tem tinta
+
+3#chamado josé#Impressora#faltou tinta de novo
