@@ -1,0 +1,164 @@
+<!doctype html>
+pagina html puro; tipo de documento
+
+O atributo charset O atributo charset serve para indicar o formato de codificação de caracteres utilizado no documento. ASCII, UTF-8, ANSI e ISO-8859-1 são exemplos de charsets.
+Perceba que eu preenchia teu olhar seis.
+
+Pois é justamente isso que nós temos do H1 até o HC.
+
+Então são os cabeçalhos que você pode utilizar dentro do seu site.
+ tag <hr> cria uma linha para separar conteúdo
+ tag <strong> deixar texto em negrito
+ tag <em> deixar texto em italico
+ tag <strike> errado
+ tag <underline> texto sublinhado
+
+ A etiqueta <tr> que significa table row é usada para definir uma linha. A etiqueta <td> que significa table data é usada para definir uma célula. As tabelas podem ter cabeçalhos. Para isso usa-se a etiqueta <th> que significa table header.
+
+ .azul em css o . define uma classe
+
+ formatações gerais utiliza-se seletores e para formatações  de exceções utilizam-se classes em CSS
+
+ ide simbolo #principal { } só pode ser utilizado uma vez no codigo do site da página
+
+ elementos div são do tipo block e fica um abaixo do outro, já elemntos span são do tipo inline e ficam um do lado do outro
+
+ pixel (px)
+
+A largura em pixel é proporcional ao dispositivo que estamos usando, monitor, telão, tela de um dispositivo móvel, etc
+
+ems (em)
+
+Determina a quantidade de vezes que se deve aumentar o tamanho da letra em relação ao tamanho do elemento pai. Por exemplo:
+
+body{
+font-size:20px;
+
+}
+
+h1{
+
+1.5em;
+
+}
+
+O tamanho da fonte no h1 será de 30px, pois ele está aumentando 1 vez e meia o tamanho da letra do elemento pai que aqui no nosso exemplo é a tag body.
+
+Seletores
+
+Seletores Universal
+*{
+    aplica-se em todos os elementos do documento
+}
+seletor de texto Seleciona elemntos pelo tipo
+
+seletor de classe 
+seletor de ID
+seletor de filho seleciona um elemento que é filho direito de outro
+
+border e background por padrão não são herdados
+
+Herança e especificidade
+
+#pagina p {
+    color: red !important;
+}
+
+#pagina p {
+    color: blue;
+}
+
+utilizando !important a cor do parágrafo permanece vermelho, porém sem o !important a cor seria azul, dado que sempre vale a última propriedade, tentar evitar
+
+especificidade, primeiro a ID depois classe depois a tag
+
+
+   background-color:#1fe0; transparente
+background bonito: #234048;
+
+
+<---------------- Bootstrap----------------------------------->
+    XG - Extra large >=1200px
+    LG - Large >=992px
+    MD - Medium >=768px
+    SM - Small >=576px
+
+    class="clearfix" usado em elemntos flutuantes
+
+    <!-- Aplicação de Margin -->
+
+    mt -> margin top
+    mb-> margin bottom
+    ml-> margin left
+    mr-> margin right
+
+no bootstrap  5 ml é me e mr é ms
+
+    mx-> margin no eixo x (horizontal) esquerda/ direita
+    my-> margin no eixo y (vertical) top/bottom
+    m-> margin em toods os lados
+
+    valor a definir (0 até 5) valores medidos rem ( unidade definida no css)
+
+    padding funciona da mesma forma que a margin só trocar margin por padding ou m por p
+
+
+
+
+
+Filtros CSS
+O CSS tem a propriedade filter suportado por todos navegadores modernos, veja no caniuse, no entanto o Edge não suporta o valor com url() e Opera mini e Internet Explorer 11 não tem suporte, exemplos que ajudam a colorir:
+
+Valores	Descrição
+filter: url("filters.svg#filter-id");	Adiciona um filtro baseado em um SVG, no firefox antes este era o único suportado, assim que possível irei editar com detalhes sobre este especificamente
+filter: brightness(.4);	Muda o brilho
+filter: contrast(200%);	Muda o contraste
+filter: grayscale(50%);	Muda o nível de cinza
+filter: invert(75%);	Inverte as cores, baseado em porcentagem
+filter: opacity(25%);	Muda a opacidade
+filter: saturate(30%);	Muda a saturação
+filter: sepia(60%);	Muda o "tom" de sépia
+
+
+
+
+<!-- JavaScript-->
+
+Operadores de comparação
+ Igual (==) valores iguais
+ Idêntico(===) valores iguais e do mesmo tipo
+ Diferente(!=)
+ Não idêntico (!==)
+ Menor(<)
+ Maior(>)
+ Menor igual(<=)
+ Maior igual (>=)
+
+
+ Eventos mouse 
+
+Os eventos são associados a elementos HTML a partir da definição desses eventos como atributos dos elementos
+
+ onclick eventos acontece ao clicar uma única vez no mouse
+
+ onbdclick eventos ao clicar duas vezes sequencias
+
+ onmouseup evento acontece ao liberar click em um objeto
+
+ onmouseover evento é acionado quando o cursor do mouse se sobrepõe à região do elemento
+ onmouseout evento é acionado qunado o cursor do mouse sair de uma região determinada
+
+ O DOM (Document Object Model) é a representação de dados dos objetos que compõem a estrutura e o conteúdo de um documento na Web. 
+
+
+Sass
+comando para monitorar arquivos, sem precisar ficar compilando
+sass --watch arquivo.scss:arquivo.css
+
+
+
+Ajax
+ ApIs 
+RESTful- Baseada em JSON
+SOAP - Baseada em XML
+
